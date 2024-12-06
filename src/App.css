@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+}
+ /* width */
+ ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  transition: 1s;
+}
+::-webkit-scrollbar:hover{
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 100%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00aaff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00aaffc6;
+}

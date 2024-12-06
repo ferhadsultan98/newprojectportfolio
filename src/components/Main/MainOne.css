@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsl(0, 0%, 2%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+.CommonMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.CommonMenu .theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  z-index: 1000;
+  color: white;
+}
+
+/* Add other styles for light and dark themes as needed */
+.CommonMenu .MainOne {
+  margin-bottom: 30vh;
+  height: 100%;
+  padding-top: 15vh;
+  display: grid;
+  grid-template-columns: 500px 400px;
+  grid-template-rows: 500px;
+  justify-content: center;
+  gap: 80px;
+  overflow: hidden;
+}
+.CommonMenu .ProjectsSection {
+  height: 100%;
+  margin-bottom: 42vh;
+}
+.CommonMenu .AboutSection {
+  height: 100%;
+  margin-bottom: 25vh;
+}
+
+.CommonMenu .background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+/* Main Container */
+
+
+/* Left Section */
+.CommonMenu .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.CommonMenu .left .hi {
+  display: flex;
+  gap: 5px;
+}
+
+.CommonMenu .hi img {
+  width: 40px;
+}
+
+.CommonMenu .hi h1 {
+  font-size: 30px;
+}
+
+.CommonMenu .frontend {
+  font-size: 50px;
+}
+
+.CommonMenu .frontend .up {
+  display: flex;
+  height: 90px;
+}
+
+.CommonMenu .frontend h1:first-child {
+  color: #00aaff;
+}
+
+.CommonMenu .left .info {
+  font-size: 26px;
+  color: gray;
+  margin: 10px auto;
+  max-width: 600px;
+}
+
+/* Button Styles */
+.CommonMenu .buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 3vh;
+}
+.CommonMenu .buttons a {
+  text-decoration: none;
+}
+/* From Uiverse.io by Farhad Sultan */
+.CommonMenu .downloadbutton {
+  position: relative;
+  padding: 0 10px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  background-color: #00aaff;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.CommonMenu .downloadbutton,
+.CommonMenu .downloadbutton__icon,
+.CommonMenu .downloadbutton__text {
+  transition: all 0.3s;
+}
+
+.CommonMenu .downloadbutton .downloadbutton__text {
+  transform: translateX(0px);
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.CommonMenu .downloadbutton .downloadbutton__icon {
+  position: absolute;
+  transform: translateX(138px);
+  height: 100%;
+  width: 39px;
+  background-color: #00aaff96;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CommonMenu .downloadbutton .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.CommonMenu .downloadbutton:hover {
+  background: #00aaff;
+}
+
+.CommonMenu .downloadbutton:hover .downloadbutton__text {
+  color: transparent;
+}
+
+.CommonMenu .downloadbutton:hover .downloadbutton__icon {
+  width: 100px;
+  transform: translateX(-36vw);
+  transform: scale(1.8);
+  text-align: center;
+}
+
+.CommonMenu .downloadbutton:active .downloadbutton__icon {
+  background-color: #00aaff;
+}
+
+.CommonMenu .downloadbutton:active {
+  border: 1px solid #00aaff;
+}
+/* Project Button */
+
+.CommonMenu .ProjectButtonn {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 14px;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid rgb(221, 218, 218);
+  background: white;
+  font-weight: bold;
+  color: black;
+  transition: all 1.2s linear;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.CommonMenu .ProjectButtonn::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, #00aaff, black);
+  border-radius: 30%;
+  height: 96px;
+  width: 96px;
+  animation: spin infinite linear 1.8s;
+  animation-delay: 0;
+  bottom: -38px;
+  right: -112px;
+  transition: all 1.2s linear;
+  z-index: 0;
+}
+
+.CommonMenu .ProjectButtonn:hover {
+  color: #fff;
+  transition-duration: 1.2s;
+}
+
+.CommonMenu .ProjectButtonn:hover::after {
+  right: -60px;
+  bottom: -92px;
+  width: 256px;
+  height: 256px;
+}
+
+.CommonMenu .ProjectButtonn > .ProjectButtonn-content {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Right Section */
+.CommonMenu .right {
+  position: relative;
+  display: inline-block;
+}
+
+.CommonMenu .myphoto {
+  position: relative;
+}
+
+.CommonMenu .myphoto img {
+  width: 100%;
+  border-radius: 100%;
+  transform: scale(0.95);
+  transition: 1s;
+  border: 5px solid white;
+}
+
+.CommonMenu .myphoto:hover img {
+  transform: scale(1);
+  filter: brightness(0.8) saturate(0.5) blur(1px); /* Donmuş görünüm için efektler */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .CommonMenu .MainOne {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .CommonMenu .left .info {
+    width: auto;
+  }
+
+  .CommonMenu .left {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .CommonMenu .MainOne {
+    padding-top: 10vh;
+    gap: 130px;
+  }
+  .CommonMenu .downloadbutton:hover .downloadbutton__icon {
+    width: 110px;
+  }
+  .CommonMenu .downloadbutton .downloadbutton__text {
+    transform: translateX(4px);
+  }
+  .CommonMenu .frontend {
+    font-size: 32px;
+  }
+  .CommonMenu .frontend .up {
+    max-width: 100%;
+    display: flex;
+    height: 75px;
+  }
+  .CommonMenu .left .info {
+    font-size: 22px;
+   text-align: center;
+  }
+
+  .CommonMenu .buttons {
+    justify-content: space-between;
+  }
+  .CommonMenu .buttons button {
+    width: 34vw;
+  }
+  .CommonMenu .left .info {
+    max-width: 380px;
+  }
+  .CommonMenu .right {
+    margin: 50px;
+  }
+}

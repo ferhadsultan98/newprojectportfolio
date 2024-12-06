@@ -1,0 +1,94 @@
+/* General styles for the error page */
+.bodyerror {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #222D32;
+    color: #ECF0F5;
+  }
+  
+  /* Center the error content */
+  .error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222D32;
+  }
+  
+  /* Styling the error box */
+  .error-content {
+    text-align: center;
+    background-color: #1A2226;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  /* Styling the error number */
+  .error-title h1 {
+    font-size: 120px;
+    font-weight: bold;
+    color: #F1C40F;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling the error description */
+  .error-title h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ECF0F5;
+    margin-bottom: 30px;
+  }
+  
+  /* Description text */
+  .error-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #A2A4A4;
+    line-height: 1.5;
+  }
+  
+  /* Go home button styling */
+  .btn-go-home {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #27EF9F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect for the button */
+  .btn-go-home:hover {
+    background-color: #0DB8DE;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 576px) {
+    .error-title h1 {
+      font-size: 100px;
+    }
+  
+    .error-title h2 {
+      font-size: 20px;
+    }
+  
+    .error-description {
+      font-size: 14px;
+    }
+  
+    .btn-go-home {
+      padding: 12px 25px;
+      font-size: 14px;
+    }
+  }
+  

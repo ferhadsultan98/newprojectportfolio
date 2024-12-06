@@ -1,0 +1,189 @@
+/* Header Styles */
+header {
+  min-width: 59%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 60px;
+  font-size: 32px;
+  font-weight: bold;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: linear-gradient(to top, rgba(0, 170, 255, 0.1), rgba(255, 255, 255, 0));
+  background-size: 100% 100%;
+}
+
+header:hover {
+  background-image: linear-gradient(to top, rgba(0, 170, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.header.hidden {
+  transform: translateY(-100%); /* Hide the header */
+  transition: 1s;
+}
+
+.header.visible {
+  transform: translateY(0); /* Show the header */
+  margin-top: 2vh;
+  transition: 1s;
+}
+
+header .logo {
+  display: flex;
+  font-size: 35px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  
+}
+header .logo img{
+  width: 50px;
+}
+header .logo:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
+header .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+header .hamburger-react-menuicon {
+  display: none;
+}
+
+header .nav-links {
+  display: flex;
+  gap: 60px;
+  transition: 0.5s ease;
+}
+
+header .nav-links.active {
+  display: flex;
+  border-radius: 30px;
+  transition: 1s;
+}
+
+header ul li {
+  list-style: none;
+  position: relative; /* Pozisyonu relative yap */
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  padding: 10px 0; /* Yüksekliği artırmak için padding ekleyebilirsin */
+}
+
+header ul li a:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.658);
+}
+
+
+header ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%; 
+  bottom: -5px; 
+  width: 0;
+  height: 2px; 
+  background-color: #00aaff; 
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+header ul li:hover::after {
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 0 10px;
+    min-width: 100%;
+    top: 0;
+    left: 0; 
+    right: 0; 
+  }
+  header .hamburger-react-menuicon {
+    display: block;
+  }
+  header .menu-toggle {
+    display: flex;
+  }
+
+  header .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    gap: 20px;
+    transition: 1s;
+  }
+
+  header .nav-links.active {
+    display: flex;
+    max-height: 400px; 
+    opacity: 1;
+    margin-top: 1vh;
+    z-index: 9999;
+    animation: backgroundAnimation 5s infinite;
+  }
+  @keyframes backgroundAnimation {
+  0% {
+    background-color: #00aaff96;
+    backdrop-filter: blur(10px)
+    
+  }
+  50% {
+    background-color: rgba(128, 128, 128, 0.76);
+    backdrop-filter: blur(10px)
+  }
+  100% {
+    background-color: #00aaff96;
+    backdrop-filter: blur(10px)
+  }
+}
+
+header .nav-links li {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  header ul li a:hover {
+    color: black;
+    background-color: #00aaff;
+    border-radius: 30px;
+  }
+
+  header .nav-links li a {
+    padding: 10px; 
+    display: block; 
+  }
+}
+
