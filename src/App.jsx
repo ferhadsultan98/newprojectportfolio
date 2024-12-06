@@ -6,7 +6,7 @@ import Layout from './components/Layout/Layout';
 import Projects from './components/Projects/Projects';
 import AboutSection from './components/About/About';
 import AdminLogin from './components/AdminLogin/AdminLogin';
-// import AdminPanel from './components/AdminLogin/AdminPanel';
+import AdminPanel from './components/AdminLogin/AdminPanel';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
@@ -41,7 +41,7 @@ function AppRoutes() {
         // Render Routes without Layout (no header)
         <Routes>
           <Route path="/admin" element={<AdminLogin />} />
-          {/* <Route path="/admin-panel" element={<AdminPanel />} /> */}
+          <Route path="/admin-panel" element={<AdminPanel />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       )}
